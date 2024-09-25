@@ -44,25 +44,32 @@ body {
     border-radius: 50%;
     background-color: hsl(33, 88%, 55%);
     transition: transform 0.5s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-100deg);
 }
 
 .circle button{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100px;
-
     background: transparent;
-    border: 0;
+    border: 2px solid black;
     font-size: 26px;
     color: white;
 }
 
 .circle button#open {
-    left: 60%;
+    top:130px;
+    left: 115px;
 }
+
 .circle button#close {
-    top: 60px;
+    top:90px;
+    left: 50px;
     transform: rotate(90deg);
     transform-origin: top left;
 }
