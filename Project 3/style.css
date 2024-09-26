@@ -57,7 +57,7 @@ body {
 .circle button{
     position: absolute;
     background: transparent;
-    border: 2px solid black;
+    border: 0;
     font-size: 26px;
     color: white;
 }
