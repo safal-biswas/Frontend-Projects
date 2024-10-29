@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --one-color: rgb(79, 79, 194);
+  --two-color: rgb(55, 172, 61);
+  --three-color: rgb(195, 12, 12);
+  --four-color: rgb(78, 133, 150);
+  --five-color: rgb(200, 37, 135);
+  --six-color: rgb(250, 131, 131);
+  --seven-color: rgb(35, 9, 155);
+  --eight-color: rgb(132, 9, 77);
+}
+
+* {
+  user-select: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dcd6bc;
+  margin-bottom: 30px;
+  border: 10px solid #dcd6bc;
+}
+
+.valid,
+.bomb {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+}
+
+.checked {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 2px solid #7c7a71;
+}
+
+.result-container {
+  width: 420px;
+  height: 100px;
+  background-color: #0d0c1ef4;
+  color: white;
+  display: none;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.result-sub-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.result {
+  font-size: 45px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+button {
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0d0c1e;
+  color: white;
+}
+
+.flags {
+  color: white;
+}
+
+.one {
+  color: var(--one-color);
+}
+
+.two {
+  color: var(--two-color);
+}
+
+.three {
+  color: var(--three-color);
+}
+
+.four {
+  color: var(--four-color);
+}
+
+.five {
+  color: var(--five-color);
+}
+
+.six {
+  color: var(--six-color);
+}
+
+.seven {
+  color: var(--seven-color);
+}
+
+.eight {
+  color: var(--eight-color);
+}
