@@ -61,10 +61,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease;
+}
+
+.search button:hover {
+    transform: scale(1.03);
+}
+
+.search button:active {
+    transform: scale(0.98);
 }
 
 .search button img {
     width: 25px;
+}
+
+.error {
+    text-align: left;
+    font-size: 14px;
+    margin: 10px 0 0 10px;
+    display: none;
 }
 
 .weather-icon {

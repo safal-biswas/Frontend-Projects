@@ -2,12 +2,29 @@ const cityName = document.getElementById("cityName");
 const apiKey = "3932de5c5b21890972e39aede4f5ad0f";
 
 async function fetchData() {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value.toLowerCase()}&appid=${apiKey}&units=metric`;
-    const response = await fetch(apiUrl);
-    const value = await response.json();
-    console.log(value);
+    try {
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value.toLowerCase()}&appid=${apiKey}&units=metric`;
+        const response = await fetch(apiUrl);
 
-    getWeatherDetail(value);
+        const weather = document.querySelector(".weather");
+        const error = document.querySelector(".error");
+
+        if (!response.ok) {
+            error.style.display = "block";
+            weather.style.display = "none";
+
+            throw new Error("Invalid city name");
+        } else {
+            const value = await response.json();
+
+            error.style.display = "none";
+            weather.style.display = "block";
+
+            getWeatherDetail(value);
+        }
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function getWeatherDetail(value) {
@@ -24,9 +41,6 @@ function getWeatherDetail(value) {
     temp.innerHTML = Math.round(value.main.temp) + "℃";
     humidity.innerHTML = value.main.humidity + "%";
     wind.innerHTML = value.wind.speed + " km/h";
-
-    const weather = document.querySelector(".weather");
-    weather.style.display = "block";
 }
 
 function checkEnter(event) {
