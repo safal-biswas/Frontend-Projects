@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="card">
+            <div class="search">
+                <input onkeydown="checkEnter(event)" id="cityName" type="text" placeholder="enter city name" spellcheck="false" />
+                <button onclick="fetchData()"><img src="images/search.png" alt="" /></button>
+            </div>
+
+            <div class="weather">
+                <img src="./images/rain.png" alt="" class="weather-icon" />
+                <h1 class="temp">22<span>℃</span></h1>
+                <h2 class="city">New York</h2>
+                <h4 class="weather-type">(Rain)</h4>
+                <div class="details">
+                    <div class="col">
+                        <img src="./images/humidity.png" alt="" />
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./images/wind.png" alt="" />
+                        <div>
+                            <p class="wind speed">5 km/h</p>
+                            <p>wind</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
